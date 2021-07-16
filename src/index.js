@@ -1,18 +1,24 @@
-import "./style.css";
-
 /* eslint-disable no-unused-vars */
-import _ from "lodash";
-
-import { PopulateDemo } from "./liststructure.js";
+import './style.css';
+import _ from 'lodash';
+import { PopulateDemo } from './liststructure.js';
+import { UpdateStatus } from './statusupdate.js';
 
 let listArray = [];
-let checkStatus = document.querySelectorAll('.checkbox');
 
-PopulateDemo();
+if (localStorage.getItem('LocalList') !== null) {
+  listArray = JSON.parse(localStorage.getItem('LocalList'))
+}
+
+PopulateDemo(listArray);
+
+let checkStatus = document.querySelectorAll('.checkbox');
 
 checkStatus.forEach((e, index) => {
   e.addEventListener('change', () => {
-      UpdateStatus(index);
+    console.log('yes y el array es ' + listArray);
+    
+      UpdateStatus(index, listArray);
   })
 })
 

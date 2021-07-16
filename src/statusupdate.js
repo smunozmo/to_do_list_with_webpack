@@ -1,8 +1,11 @@
-import { listArray } from "./index";
+import {StoreList} from './liststructure';
 
-function UpdateStatus(index) {
+function UpdateStatus(index, array) {
     const checkStatus = document.querySelectorAll('.checkbox');
-            listArray[index].completed = checkStatus[index].checked;
+            console.log(array);
+            
+            array[index].completed = checkStatus[index].checked;
+            StoreList(array)
 }
 
 export { UpdateStatus };

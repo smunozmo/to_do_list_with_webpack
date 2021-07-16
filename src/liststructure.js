@@ -2,7 +2,8 @@ import { listArray } from "./index";
 
 const listContainer = document.getElementById('list-container');
 
-function PopulateDemo() {
+function PopulateDemo(array) {
+  
   const hardCodeObj1 = {
     description: 'New task 1',
     completed: false,
@@ -19,15 +20,18 @@ function PopulateDemo() {
     index: 2,
   };
   
-  if (localStorage.getItem('LocalList') !== null) {
-    array = JSON.parse(localStorage.getItem('LocalList'))
-  } else {
-    listArray.push(hardCodeObj1);
-    listArray.push(hardCodeObj2);
-    listArray.push(hardCodeObj3);
+  
+  if (localStorage.getItem('LocalList') == null) {
+    array.push(hardCodeObj1);
+    array.push(hardCodeObj2);
+    array.push(hardCodeObj3);
   }
 
-  PopulateList(listArray);
+  PopulateList(array);
+}
+
+function StoreList(arr) {
+  localStorage.setItem('LocalList', JSON.stringify(arr));
 }
 
 function PopulateList(array) {
@@ -44,8 +48,5 @@ function PopulateList(array) {
     StoreList(array);
   }
 
-  function StoreList(arr) {
-    localStorage.setItem('LocalList', JSON.stringify(arr));
-}
 
-export { PopulateDemo, PopulateList };
+export { PopulateDemo, PopulateList, StoreList };
