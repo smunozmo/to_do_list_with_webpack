@@ -1,8 +1,9 @@
 /* eslint-disable no-unused-vars */
 import './style.css';
 import _ from 'lodash';
-import { PopulateDemo } from './liststructure.js';
-import { UpdateStatus } from './statusupdate.js';
+import { PopulateDemo } from './liststructure';
+import { UpdateStatus } from './statusupdate';
+import { DragDropList } from './draganddrop';
 
 let listArray = [];
 
@@ -11,12 +12,12 @@ if (localStorage.getItem('LocalList') !== null) {
 }
 
 PopulateDemo(listArray);
+DragDropList();
 
 let checkStatus = document.querySelectorAll('.checkbox');
 
 checkStatus.forEach((e, index) => {
   e.addEventListener('change', () => {
-    console.log('yes y el array es ' + listArray);
     
       UpdateStatus(index, listArray);
   })
