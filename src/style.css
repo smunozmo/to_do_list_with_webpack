@@ -2,3 +2,14 @@ ul,
 li {
   list-style: none;
 }
+
+.dragging {
+  color: royalblue;
+  opacity: 70%;
+  background-color: white;
+}
+
+.over {
+  background-color: royalblue;
+  color: white;
+}

@@ -1,3 +1,11 @@
 # Ignore artifacts:
 build
 coverage
+
+# Ignore dist folder
+
+/dist
+
+# Ignore Webpack Config
+
+/webpack.config.js
