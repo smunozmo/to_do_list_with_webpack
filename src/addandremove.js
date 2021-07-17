@@ -6,7 +6,7 @@ function AddList(array) {
   const newTask = {
     description: newDescription,
     completed: false,
-    index: array.length,
+    index: array.length + 1,
   };
   array.push(newTask);
   input.value = '';
