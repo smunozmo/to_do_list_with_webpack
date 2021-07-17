@@ -44,4 +44,9 @@ function ClearList(array) {
     location.reload();
 }
 
-export { AddList, RemoveTask, ClearList };
+function EditTask(array, index) {
+    const listDraggable = document.querySelectorAll('li');
+    array[index].description = listDraggable[index].innerText;
+}
+
+export { AddList, RemoveTask, ClearList, EditTask };
