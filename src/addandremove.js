@@ -25,4 +25,23 @@ function RemoveTask(array, index) {
     window.location.reload();
 }
 
-export { AddList, RemoveTask };
+function ClearList(array) {
+
+    const checkStatus = document.querySelectorAll('.checkbox');
+    console.log(checkStatus);
+    
+    for (let i = array.length-1; i >= 0; i--) {
+        if (checkStatus[i].checked) {
+            array.splice(i, 1)
+        }
+    }
+    
+    for (let i = 0; i < array.length; i++) {
+        array[i].index = i; 
+    }
+    
+    PopulateList(array)
+    location.reload();
+}
+
+export { AddList, RemoveTask, ClearList };

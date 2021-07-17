@@ -6,10 +6,11 @@ import _ from 'lodash';
 import { PopulateDemo } from './liststructure';
 import DragDropList from './draganddrop';
 import UpdateStatus from './statusupdate';
-import { AddList, RemoveTask } from './addandremove';
+import { AddList, RemoveTask, ClearList } from './addandremove';
 
 let listArray = [];
 const addBtn = document.querySelector('#add');
+const clearBtn = document.querySelector('#clear');
 
 // Local Storage get and load start
 
@@ -51,6 +52,10 @@ remove.forEach((e, index) => {
         RemoveTask(listArray, index);
     })
 })
+
+clearBtn.addEventListener('click', () => {
+  ClearList(listArray);
+});
 
 // Event Listeners end
 
