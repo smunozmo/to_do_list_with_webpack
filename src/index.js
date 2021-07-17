@@ -6,7 +6,9 @@ import _ from 'lodash';
 import { PopulateList } from './liststructure';
 import DragDropList from './draganddrop';
 import UpdateStatus from './statusupdate';
-import { AddList, RemoveTask, ClearList, EditTask } from './addandremove';
+import {
+  AddList, RemoveTask, ClearList, EditTask,
+} from './addandremove';
 
 let listArray = [];
 const addBtn = document.querySelector('#add');
@@ -25,7 +27,8 @@ DragDropList();
 
 const checkStatus = document.querySelectorAll('.checkbox');
 const remove = document.querySelectorAll('#remove');
-const listDraggable = document.querySelectorAll('li')
+const listDraggable = document.querySelectorAll('li');
+const input = document.querySelector('#input');
 
 // Event Listeners start
 
@@ -43,16 +46,15 @@ input.addEventListener('keypress', (e) => {
 
 addBtn.addEventListener('click', () => {
   AddList(listArray);
-  
 });
 
 remove.forEach((e, index) => {
-    e.addEventListener('click', () => {
-        console.log('esss');
-        
-        RemoveTask(listArray, index);
-    })
-})
+  e.addEventListener('click', () => {
+    console.log('esss');
+
+    RemoveTask(listArray, index);
+  });
+});
 
 clearBtn.addEventListener('click', () => {
   ClearList(listArray);
@@ -60,14 +62,14 @@ clearBtn.addEventListener('click', () => {
 
 listDraggable.forEach((e) => {
   e.addEventListener('keypress', (i) => {
-          if (i.key === 'Enter') {
-            i.preventDefault();
-            EditTask(listArray, e.id);
-            PopulateList(listArray);
-            window.location.reload();
-          }
-    })
-})
+    if (i.key === 'Enter') {
+      i.preventDefault();
+      EditTask(listArray, e.id);
+      PopulateList(listArray);
+      window.location.reload();
+    }
+  });
+});
 
 // Event Listeners end
 
