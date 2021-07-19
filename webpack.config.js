@@ -15,8 +15,7 @@ module.exports = {
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
-    clean: true,
-    publicPath: "/to_do_list_with_webpack/",
+    clean: true
   },
   module: {
     rules: [
