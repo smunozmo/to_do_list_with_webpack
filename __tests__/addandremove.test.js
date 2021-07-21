@@ -1,3 +1,7 @@
+/**
+ * @jest-environment jsdom
+ */
+
 import { AddList, RemoveTask } from "../src/addandremove.js";
 
 describe('addandremove.js', () => {
@@ -15,16 +19,5 @@ describe('addandremove.js', () => {
     });
 
 
-  });
-
-
-  /* test('AddList adds an object to the array of tasks', () => {
-    let array = [];
-    document.body.innerHTML =
-    `<div>
-      <input type="text" id="#input" value="Task 1">
-    </div>`;
-    expect()
-  }) */
+  })
 })
-

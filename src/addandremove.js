@@ -1,4 +1,4 @@
-import { PopulateList } from './liststructure';
+// import { PopulateList } from './liststructure';
 
 function AddList(array) {
   const input = document.querySelector('#input');
@@ -10,8 +10,8 @@ function AddList(array) {
   };
   array.push(newTask);
   input.value = '';
-  PopulateList(array);
-  window.location.reload();
+  // PopulateList(array);
+  // window.location.reload();
 }
 
 function RemoveTask(array, index) {
