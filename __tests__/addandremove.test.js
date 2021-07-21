@@ -1,9 +1,30 @@
-import { AddList, RemoveTask } from "../src/addandremove";
+import { AddList, RemoveTask } from "../src/addandremove.js";
+
+describe('addandremove.js', () => {
+  describe('Addlist()', () => {
+    test('AddList adds an object to the array of tasks', () => {
+      let array = [];
+      document.body.innerHTML =
+      `<div>
+        <input type="text" id="#input" value="Task 1">
+      </div>`;
+
+      AddList(array);
+
+      expect(array).toHaveLength(1);
+    });
 
 
-test('Add one new task to the list', () => {
-   
-});
+  });
 
 
-// array has +1 and the item
+  /* test('AddList adds an object to the array of tasks', () => {
+    let array = [];
+    document.body.innerHTML =
+    `<div>
+      <input type="text" id="#input" value="Task 1">
+    </div>`;
+    expect()
+  }) */
+})
+
