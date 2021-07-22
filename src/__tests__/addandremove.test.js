@@ -265,9 +265,9 @@ describe('addandremove.js', () => {
       // Assert
       EditTask(array, index);
 
-
       expect(array[1].description).toBe('Task Edited 2');
     });
 
   });
+  
 });

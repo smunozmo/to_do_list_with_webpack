@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1626991144967" clover="3.2.0">
-  <project timestamp="1626991144967" name="All files">
-    <metrics statements="36" coveredstatements="17" conditionals="4" coveredconditionals="0" methods="7" coveredmethods="3" elements="47" coveredelements="20" complexity="0" loc="36" ncloc="36" packages="1" files="2" classes="2"/>
-    <file name="addandremove.js" path="/Users/arturoalvarez/Documents/Microverse/Main Curriculum/JS/Sebas-Testing/to_do_list_with_webpack/src/addandremove.js">
+<coverage generated="1626993524205" clover="3.2.0">
+  <project timestamp="1626993524205" name="All files">
+    <metrics statements="39" coveredstatements="20" conditionals="4" coveredconditionals="0" methods="8" coveredmethods="4" elements="51" coveredelements="24" complexity="0" loc="39" ncloc="39" packages="1" files="3" classes="3"/>
+    <file name="addandremove.js" path="/Users/sehastian/Desktop/Microverse/Git Hub Repositories/to-do-list-with-webpack/src/addandremove.js">
       <metrics statements="24" coveredstatements="16" conditionals="2" coveredconditionals="0" methods="4" coveredmethods="3"/>
       <line num="4" count="5" type="stmt"/>
       <line num="5" count="5" type="stmt"/>
@@ -29,9 +29,9 @@
       <line num="48" count="1" type="stmt"/>
       <line num="49" count="1" type="stmt"/>
     </file>
-    <file name="liststructure.js" path="/Users/arturoalvarez/Documents/Microverse/Main Curriculum/JS/Sebas-Testing/to_do_list_with_webpack/src/liststructure.js">
+    <file name="liststructure.js" path="/Users/sehastian/Desktop/Microverse/Git Hub Repositories/to-do-list-with-webpack/src/liststructure.js">
       <metrics statements="12" coveredstatements="1" conditionals="2" coveredconditionals="0" methods="3" coveredmethods="0"/>
-      <line num="1" count="1" type="stmt"/>
+      <line num="1" count="2" type="stmt"/>
       <line num="4" count="0" type="stmt"/>
       <line num="8" count="0" type="stmt"/>
       <line num="9" count="0" type="stmt"/>
@@ -43,6 +43,12 @@
       <line num="20" count="0" type="stmt"/>
       <line num="22" count="0" type="stmt"/>
       <line num="26" count="0" type="stmt"/>
+    </file>
+    <file name="statusupdate.js" path="/Users/sehastian/Desktop/Microverse/Git Hub Repositories/to-do-list-with-webpack/src/statusupdate.js">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <line num="4" count="1" type="stmt"/>
+      <line num="6" count="1" type="stmt"/>
+      <line num="7" count="1" type="stmt"/>
     </file>
   </project>
 </coverage>
