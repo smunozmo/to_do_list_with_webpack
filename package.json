@@ -4,11 +4,12 @@
   "description": "",
   "private": true,
   "scripts": {
-    "test": "jest",
+    "test": "jest --verbose --watch --coverage",
     "watch": "jest --verbose --watch --coverage *.js",
     "start": "webpack serve --open",
     "build": "webpack"
   },
+  "rootDir": "../.",
   "keywords": [],
   "author": "",
   "license": "ISC",

@@ -2,10 +2,10 @@
  * @jest-environment jsdom
  */
 
-import { PopulateList } from '../src/liststructure.js';
-import { AddList, RemoveTask } from '../src/addandremove.js';
+import { PopulateList } from '../liststructure.js';
+import { AddList, RemoveTask } from '../addandremove.js';
 
-jest.mock('../src/liststructure.js');
+jest.mock('../liststructure.js');
 
 describe('addandremove.js', () => {
   describe('Addlist()', () => {
