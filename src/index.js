@@ -64,7 +64,7 @@ listDraggable.forEach((e) => {
       i.preventDefault();
       EditTask(listArray, e.id);
       PopulateList(listArray);
-      window.location.reload();
+      // window.location.reload();
     }
   });
 });

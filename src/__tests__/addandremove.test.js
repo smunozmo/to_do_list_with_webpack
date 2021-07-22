@@ -2,8 +2,14 @@
  * @jest-environment jsdom
  */
 
-import { PopulateList } from '../liststructure.js';
-import { AddList, RemoveTask } from '../addandremove.js';
+import {
+  PopulateList
+} from '../liststructure.js';
+import {
+  AddList,
+  RemoveTask,
+  EditTask
+} from '../addandremove.js';
 
 jest.mock('../liststructure.js');
 
@@ -18,7 +24,9 @@ describe('addandremove.js', () => {
       PopulateList.mockImplementation(() => true);
 
       delete window.location;
-      window.location = { reload: jest.fn() };
+      window.location = {
+        reload: jest.fn()
+      };
 
       AddList(array);
 
@@ -34,7 +42,9 @@ describe('addandremove.js', () => {
       PopulateList.mockImplementation(() => true);
 
       delete window.location;
-      window.location = { reload: jest.fn() };
+      window.location = {
+        reload: jest.fn()
+      };
 
       AddList(array);
 
@@ -50,7 +60,9 @@ describe('addandremove.js', () => {
       PopulateList.mockImplementation(() => true);
 
       delete window.location;
-      window.location = { reload: jest.fn() };
+      window.location = {
+        reload: jest.fn()
+      };
 
       AddList(array);
 
@@ -66,7 +78,9 @@ describe('addandremove.js', () => {
       PopulateList.mockImplementation(() => true);
 
       delete window.location;
-      window.location = { reload: jest.fn() };
+      window.location = {
+        reload: jest.fn()
+      };
 
       AddList(array);
 
@@ -82,7 +96,9 @@ describe('addandremove.js', () => {
       const populateList = PopulateList.mockImplementation(() => true);
 
       delete window.location;
-      window.location = { reload: jest.fn() };
+      window.location = {
+        reload: jest.fn()
+      };
 
       AddList(array);
 
@@ -92,8 +108,7 @@ describe('addandremove.js', () => {
 
   describe('RemoveTask()', () => {
     test('Removes an object from the array of tasks', () => {
-      const array = [
-        {
+      const array = [{
           description: 'Task 1',
           completed: false,
           index: 0,
@@ -102,13 +117,16 @@ describe('addandremove.js', () => {
           description: 'Task 2',
           completed: false,
           index: 0,
-        }];
+        }
+      ];
       const index = 0;
 
       PopulateList.mockImplementation(() => true);
 
       delete window.location;
-      window.location = { reload: jest.fn() };
+      window.location = {
+        reload: jest.fn()
+      };
 
       RemoveTask(array, index);
 
@@ -116,8 +134,7 @@ describe('addandremove.js', () => {
     });
 
     test('Removes the correct object from the array of tasks', () => {
-      const array = [
-        {
+      const array = [{
           description: 'Task 1',
           completed: false,
           index: 0,
@@ -126,13 +143,16 @@ describe('addandremove.js', () => {
           description: 'Task 2',
           completed: false,
           index: 0,
-        }];
+        }
+      ];
       const index = 0;
 
       PopulateList.mockImplementation(() => true);
 
       delete window.location;
-      window.location = { reload: jest.fn() };
+      window.location = {
+        reload: jest.fn()
+      };
 
       RemoveTask(array, index);
 
@@ -140,8 +160,7 @@ describe('addandremove.js', () => {
     });
 
     test('Removes an object and leaves the correct object on the array of tasks', () => {
-      const array = [
-        {
+      const array = [{
           description: 'Task 1',
           completed: false,
           index: 0,
@@ -150,13 +169,16 @@ describe('addandremove.js', () => {
           description: 'Task 2',
           completed: false,
           index: 0,
-        }];
+        }
+      ];
       const index = 0;
 
       PopulateList.mockImplementation(() => true);
 
       delete window.location;
-      window.location = { reload: jest.fn() };
+      window.location = {
+        reload: jest.fn()
+      };
 
       RemoveTask(array, index);
 
@@ -164,8 +186,7 @@ describe('addandremove.js', () => {
     });
 
     test('Invokes the PopulateList function with array as argument', () => {
-      const array = [
-        {
+      const array = [{
           description: 'Task 1',
           completed: false,
           index: 0,
@@ -174,13 +195,16 @@ describe('addandremove.js', () => {
           description: 'Task 2',
           completed: false,
           index: 0,
-        }];
+        }
+      ];
       const index = 0;
 
       const populateList = PopulateList.mockImplementation(() => true);
 
       delete window.location;
-      window.location = { reload: jest.fn() };
+      window.location = {
+        reload: jest.fn()
+      };
 
       RemoveTask(array, index);
 
@@ -188,8 +212,7 @@ describe('addandremove.js', () => {
     });
 
     test('Invokes the PopulateList function with array as argument', () => {
-      const array = [
-        {
+      const array = [{
           description: 'Task 1',
           completed: false,
           index: 0,
@@ -198,17 +221,64 @@ describe('addandremove.js', () => {
           description: 'Task 2',
           completed: false,
           index: 0,
-        }];
+        }
+      ];
       const index = 0;
 
       const populateList = PopulateList.mockImplementation(() => true);
 
       delete window.location;
-      window.location = { reload: jest.fn() };
+      window.location = {
+        reload: jest.fn()
+      };
 
       RemoveTask(array, index);
 
       expect(populateList).not.toHaveBeenLastCalledWith();
     });
+  });
+
+  describe('EditTask()', () => {
+    test('Updates the task description in the array', () => {
+      // Arrange
+      const array = [{
+          description: 'Task 1',
+          completed: false,
+          index: 0,
+        },
+        {
+          description: 'Task 2',
+          completed: false,
+          index: 1,
+        },
+      ];
+      const index = 1;
+
+      document.body.innerHTML = `
+        <ul><li>
+        Task Edited 1
+      </li>
+      <li>
+        Task Edited 2
+      </li>
+      <li>
+        Task Edited 3
+      </li>
+      </ul>`;
+
+      // Assert
+      EditTask(array, index);
+
+      console.log('array :', array)
+      expect(array[0].description).toBe('Task 1');
+    });
+
+
+
+
+
+
+
+
   });
 });

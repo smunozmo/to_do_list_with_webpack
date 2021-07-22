@@ -43,6 +43,9 @@ function ClearList(array) {
 
 function EditTask(array, index) {
   const listDraggable = document.querySelectorAll('li');
+  const ul = document.querySelector('ul');
+  console.log('ul: ', ul);
+  console.log('doc :', document.body);
   array[index].description = listDraggable[index].innerText;
 }
 
