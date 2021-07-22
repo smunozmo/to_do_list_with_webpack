@@ -26,7 +26,6 @@ function RemoveTask(array, index) {
 
 function ClearList(array) {
   const checkStatus = document.querySelectorAll('.checkbox');
-  console.log(checkStatus);
 
   for (let i = array.length - 1; i >= 0; i -= 1) {
     if (checkStatus[i].checked) {

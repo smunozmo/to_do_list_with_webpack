@@ -50,8 +50,6 @@ addBtn.addEventListener('click', () => {
 
 remove.forEach((e, index) => {
   e.addEventListener('click', () => {
-    console.log('esss');
-
     RemoveTask(listArray, index);
   });
 });
