@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1626974956696" clover="3.2.0">
-  <project timestamp="1626974956696" name="All files">
-    <metrics statements="37" coveredstatements="18" conditionals="4" coveredconditionals="0" methods="7" coveredmethods="3" elements="48" coveredelements="21" complexity="0" loc="37" ncloc="37" packages="1" files="2" classes="2"/>
+<coverage generated="1626991144967" clover="3.2.0">
+  <project timestamp="1626991144967" name="All files">
+    <metrics statements="36" coveredstatements="17" conditionals="4" coveredconditionals="0" methods="7" coveredmethods="3" elements="47" coveredelements="20" complexity="0" loc="36" ncloc="36" packages="1" files="2" classes="2"/>
     <file name="addandremove.js" path="/Users/arturoalvarez/Documents/Microverse/Main Curriculum/JS/Sebas-Testing/to_do_list_with_webpack/src/addandremove.js">
-      <metrics statements="25" coveredstatements="17" conditionals="2" coveredconditionals="0" methods="4" coveredmethods="3"/>
+      <metrics statements="24" coveredstatements="16" conditionals="2" coveredconditionals="0" methods="4" coveredmethods="3"/>
       <line num="4" count="5" type="stmt"/>
       <line num="5" count="5" type="stmt"/>
       <line num="6" count="5" type="stmt"/>
@@ -25,7 +25,6 @@
       <line num="40" count="0" type="stmt"/>
       <line num="41" count="0" type="stmt"/>
       <line num="45" count="1" type="stmt"/>
-      <line num="46" count="1" type="stmt"/>
       <line num="47" count="1" type="stmt"/>
       <line num="48" count="1" type="stmt"/>
       <line num="49" count="1" type="stmt"/>

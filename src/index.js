@@ -62,9 +62,13 @@ listDraggable.forEach((e) => {
   e.addEventListener('keypress', (i) => {
     if (i.key === 'Enter') {
       i.preventDefault();
+      console.log(typeof(e.id));
+      console.log(e.id);
+      console.log(typeof listArray);
+      console.log(listArray);
       EditTask(listArray, e.id);
       PopulateList(listArray);
-      // window.location.reload();
+      window.location.reload();
     }
   });
 });

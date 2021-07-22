@@ -252,33 +252,22 @@ describe('addandremove.js', () => {
           index: 1,
         },
       ];
-      const index = 1;
+      const index = '1';
 
-      document.body.innerHTML = `
-        <ul><li>
-        Task Edited 1
-      </li>
-      <li>
-        Task Edited 2
-      </li>
-      <li>
-        Task Edited 3
-      </li>
-      </ul>`;
+      document.body.innerHTML = `<div>
+      <ul class="d-flex flex-column p-0" id="list-container">
+        <li>Task Edited 1</li>
+        <li>Task Edited 2</li>
+        <li>Task Edited 3</li>
+      </ul>
+      </div>`;
 
       // Assert
       EditTask(array, index);
 
-      console.log('array :', array)
-      expect(array[0].description).toBe('Task 1');
+
+      expect(array[1].description).toBe('Task Edited 2');
     });
-
-
-
-
-
-
-
 
   });
 });
