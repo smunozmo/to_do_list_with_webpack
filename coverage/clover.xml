@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1627060190197" clover="3.2.0">
-  <project timestamp="1627060190198" name="All files">
+<coverage generated="1627060900506" clover="3.2.0">
+  <project timestamp="1627060900506" name="All files">
     <metrics statements="58" coveredstatements="33" conditionals="6" coveredconditionals="3" methods="16" coveredmethods="7" elements="80" coveredelements="43" complexity="0" loc="58" ncloc="58" packages="1" files="4" classes="4"/>
     <file name="addandremove.js" path="/Users/arturoalvarez/Documents/Microverse/Main Curriculum/JS/Sebas-Testing/to_do_list_with_webpack/src/addandremove.js">
       <metrics statements="22" coveredstatements="22" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="4"/>
