@@ -3,13 +3,13 @@
  */
 
 import {
-  PopulateList
+  PopulateList,
 } from '../liststructure.js';
 import {
   AddList,
   RemoveTask,
   ClearList,
-  EditTask
+  EditTask,
 } from '../addandremove.js';
 
 jest.mock('../liststructure.js');
@@ -26,7 +26,7 @@ describe('addandremove.js', () => {
 
       delete window.location;
       window.location = {
-        reload: jest.fn()
+        reload: jest.fn(),
       };
 
       AddList(array);
@@ -44,7 +44,7 @@ describe('addandremove.js', () => {
 
       delete window.location;
       window.location = {
-        reload: jest.fn()
+        reload: jest.fn(),
       };
 
       AddList(array);
@@ -62,7 +62,7 @@ describe('addandremove.js', () => {
 
       delete window.location;
       window.location = {
-        reload: jest.fn()
+        reload: jest.fn(),
       };
 
       AddList(array);
@@ -80,7 +80,7 @@ describe('addandremove.js', () => {
 
       delete window.location;
       window.location = {
-        reload: jest.fn()
+        reload: jest.fn(),
       };
 
       AddList(array);
@@ -98,7 +98,7 @@ describe('addandremove.js', () => {
 
       delete window.location;
       window.location = {
-        reload: jest.fn()
+        reload: jest.fn(),
       };
 
       AddList(array);
@@ -110,15 +110,15 @@ describe('addandremove.js', () => {
   describe('RemoveTask()', () => {
     test('Removes an object from the array of tasks', () => {
       const array = [{
-          description: 'Task 1',
-          completed: false,
-          index: 0,
-        },
-        {
-          description: 'Task 2',
-          completed: false,
-          index: 0,
-        }
+        description: 'Task 1',
+        completed: false,
+        index: 0,
+      },
+      {
+        description: 'Task 2',
+        completed: false,
+        index: 0,
+      },
       ];
       const index = 0;
 
@@ -126,7 +126,7 @@ describe('addandremove.js', () => {
 
       delete window.location;
       window.location = {
-        reload: jest.fn()
+        reload: jest.fn(),
       };
 
       RemoveTask(array, index);
@@ -136,15 +136,15 @@ describe('addandremove.js', () => {
 
     test('Removes the correct object from the array of tasks', () => {
       const array = [{
-          description: 'Task 1',
-          completed: false,
-          index: 0,
-        },
-        {
-          description: 'Task 2',
-          completed: false,
-          index: 0,
-        }
+        description: 'Task 1',
+        completed: false,
+        index: 0,
+      },
+      {
+        description: 'Task 2',
+        completed: false,
+        index: 0,
+      },
       ];
       const index = 0;
 
@@ -152,7 +152,7 @@ describe('addandremove.js', () => {
 
       delete window.location;
       window.location = {
-        reload: jest.fn()
+        reload: jest.fn(),
       };
 
       RemoveTask(array, index);
@@ -162,15 +162,15 @@ describe('addandremove.js', () => {
 
     test('Removes an object and leaves the correct object on the array of tasks', () => {
       const array = [{
-          description: 'Task 1',
-          completed: false,
-          index: 0,
-        },
-        {
-          description: 'Task 2',
-          completed: false,
-          index: 0,
-        }
+        description: 'Task 1',
+        completed: false,
+        index: 0,
+      },
+      {
+        description: 'Task 2',
+        completed: false,
+        index: 0,
+      },
       ];
       const index = 0;
 
@@ -178,7 +178,7 @@ describe('addandremove.js', () => {
 
       delete window.location;
       window.location = {
-        reload: jest.fn()
+        reload: jest.fn(),
       };
 
       RemoveTask(array, index);
@@ -188,15 +188,15 @@ describe('addandremove.js', () => {
 
     test('Invokes the PopulateList function with array as argument', () => {
       const array = [{
-          description: 'Task 1',
-          completed: false,
-          index: 0,
-        },
-        {
-          description: 'Task 2',
-          completed: false,
-          index: 0,
-        }
+        description: 'Task 1',
+        completed: false,
+        index: 0,
+      },
+      {
+        description: 'Task 2',
+        completed: false,
+        index: 0,
+      },
       ];
       const index = 0;
 
@@ -204,7 +204,7 @@ describe('addandremove.js', () => {
 
       delete window.location;
       window.location = {
-        reload: jest.fn()
+        reload: jest.fn(),
       };
 
       RemoveTask(array, index);
@@ -214,15 +214,15 @@ describe('addandremove.js', () => {
 
     test('Invokes the PopulateList function with array as argument', () => {
       const array = [{
-          description: 'Task 1',
-          completed: false,
-          index: 0,
-        },
-        {
-          description: 'Task 2',
-          completed: false,
-          index: 0,
-        }
+        description: 'Task 1',
+        completed: false,
+        index: 0,
+      },
+      {
+        description: 'Task 2',
+        completed: false,
+        index: 0,
+      },
       ];
       const index = 0;
 
@@ -230,7 +230,7 @@ describe('addandremove.js', () => {
 
       delete window.location;
       window.location = {
-        reload: jest.fn()
+        reload: jest.fn(),
       };
 
       RemoveTask(array, index);
@@ -243,15 +243,15 @@ describe('addandremove.js', () => {
     test('Updates the task description in the array', () => {
       // Arrange
       const array = [{
-          description: 'Task 1',
-          completed: false,
-          index: 0,
-        },
-        {
-          description: 'Task 2',
-          completed: false,
-          index: 1,
-        },
+        description: 'Task 1',
+        completed: false,
+        index: 0,
+      },
+      {
+        description: 'Task 2',
+        completed: false,
+        index: 1,
+      },
       ];
       const index = '1';
 
@@ -268,27 +268,26 @@ describe('addandremove.js', () => {
 
       expect(array[1].description).toBe('Task Edited 2');
     });
-
   });
 
   describe('ClearList()', () => {
     test('Delete tasks that are completed from the array', () => {
       // Arrange
       const array = [{
-          description: 'Task 1',
-          completed: false,
-          index: 0,
-        },
-        {
-          description: 'Task 2',
-          completed: false,
-          index: 1,
-        },
-        {
-          description: 'Task 3',
-          completed: false,
-          index: 2,
-        }
+        description: 'Task 1',
+        completed: false,
+        index: 0,
+      },
+      {
+        description: 'Task 2',
+        completed: false,
+        index: 1,
+      },
+      {
+        description: 'Task 3',
+        completed: false,
+        index: 2,
+      },
       ];
 
       document.body.innerHTML = `<div>
@@ -303,7 +302,7 @@ describe('addandremove.js', () => {
 
       delete window.location;
       window.location = {
-        reload: jest.fn()
+        reload: jest.fn(),
       };
 
       // Act
@@ -312,7 +311,5 @@ describe('addandremove.js', () => {
       // Assert
       expect(array).toHaveLength(1);
     });
-
   });
-
 });

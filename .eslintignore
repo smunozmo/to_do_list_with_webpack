@@ -1,6 +1,7 @@
 # Ignore dist folder
 
 /dist
+jest.config.js
 
 # Ignore Webpack Config
 

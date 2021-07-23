@@ -9,7 +9,6 @@ jest.mock('../liststructure.js');
 
 describe('UpdateStatus()', () => {
   test('Update task\'s completed status when checkbox is checked', () => {
-    
     const array = [{
       description: 'Task 1',
       completed: false,
@@ -24,8 +23,8 @@ describe('UpdateStatus()', () => {
       description: 'Task 3',
       completed: false,
       index: 2,
-    }
-  ];
+    },
+    ];
 
     document.body.innerHTML = `<div>
     <ul class="d-flex flex-column p-0" id="list-container">
@@ -43,5 +42,4 @@ describe('UpdateStatus()', () => {
 
     expect(array[0].completed).toBeTruthy();
   });
-  
 });
