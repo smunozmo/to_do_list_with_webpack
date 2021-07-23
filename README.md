@@ -8,7 +8,7 @@
 
 ## Built With
 
-- HTML + CSS + Bootstrap + Javascript + Webpack
+- HTML + CSS + Bootstrap + Javascript + Webpack + Jest
 
 ## Getting Started
 
@@ -18,41 +18,51 @@
 ### Prerequisites
 
 * No prerequisites needed for this project.
- <!--
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
--->
-
 ### Installation
-<!-- 1. Get a free API Key at [https://example.com](https://example.com) -->
+
 1. Clone the repo
    ```sh
-   git clone git@github.com:smunozmo/Module_1_Capstone.git
+   git clone git@github.com:smunozmo/to_do_list_with_webpack.git
    ```
 2. Install NPM packages
    ```sh
    npm install
    ```
-<!-- 4. Enter your API in `config.js`
-   ```JS
-   const API_KEY = 'ENTER YOUR API';
+
+### Testing
+
+1. Run the tests
+   ```sh
+   npm test
    ```
--->
-
-## Author
-
+   or
+   ```sh
+   npm run watch
+   ```
+2. See report in browser 
+   ```sh
+   open ./coverage/lcov-report/index.html
+   ```
 👤 **Author**
 
+
+Arturo Álvarez
+
+- Github: [@StarSheriff2](https://github.com/StarSheriff2)
+- Twitter: [@ArturoAlvarezV](https://twitter.com/ArturoAlvarezV)
+- Linkedin: [Arturo Alvarez](https://www.linkedin.com/in/arturoalvarezv/)
+
+Sebastián Muñoz
+
 - GitHub: [@smunozmo](https://github.com/smunozmo)
+- Twitter: [@smunozmo](https://twitter.com/smunozmo)
+- Linkedin: [Sebastián Muñoz](https://www.linkedin.com/in/smunozmo/)
 
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/smunozmo/Portfolio/issues).
+Feel free to check the [issues page](https://github.com/smunozmo/to_do_list_with_webpack/issues).
 
 
 ## 👋 Acknowledgements

@@ -4,7 +4,7 @@
 import './style.css';
 import _ from 'lodash';
 import { PopulateList } from './liststructure';
-import DragDropList from './draganddrop';
+import { DragDropList } from './draganddrop';
 import UpdateStatus from './statusupdate';
 import {
   AddList, RemoveTask, ClearList, EditTask,
@@ -21,7 +21,7 @@ if (localStorage.getItem('LocalList') !== null) {
 }
 
 PopulateList(listArray);
-DragDropList();
+DragDropList(listArray);
 
 // Local Storage get and load start
 
