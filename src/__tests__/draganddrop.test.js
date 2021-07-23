@@ -8,7 +8,7 @@ jest.mock('../liststructure.js');
 
 describe('DragDropList()', () => {
   test('Update index value of a task upon dragend', () => {
-    
+
     const listArray = [{
         description: 'Task 1',
         completed: false,
@@ -25,7 +25,6 @@ describe('DragDropList()', () => {
         index: 2,
       }
     ];
-
 
     let startPos = 0;
     let currentPos = 1;
@@ -46,5 +45,5 @@ describe('DragDropList()', () => {
 
     expect(listArray[0].description).toBe('Task 2');
   });
-  
+
 });

@@ -8,6 +8,7 @@ import {
 import {
   AddList,
   RemoveTask,
+  ClearList,
   EditTask
 } from '../addandremove.js';
 
@@ -269,5 +270,49 @@ describe('addandremove.js', () => {
     });
 
   });
-  
+
+  describe('ClearList()', () => {
+    test('Delete tasks that are completed from the array', () => {
+      // Arrange
+      const array = [{
+          description: 'Task 1',
+          completed: false,
+          index: 0,
+        },
+        {
+          description: 'Task 2',
+          completed: false,
+          index: 1,
+        },
+        {
+          description: 'Task 3',
+          completed: false,
+          index: 2,
+        }
+      ];
+
+      document.body.innerHTML = `<div>
+        <ul class="d-flex flex-column p-0" id="list-container">
+          <li><input class="checkbox" type="checkbox" checked>Task 1</li>
+          <li><input class="checkbox" type="checkbox">Task 2</li>
+          <li><input class="checkbox" type="checkbox" checked>Task 3</li>
+        </ul>
+        </div>`;
+
+      PopulateList.mockImplementation(() => true);
+
+      delete window.location;
+      window.location = {
+        reload: jest.fn()
+      };
+
+      // Act
+      ClearList(array);
+
+      // Assert
+      expect(array).toHaveLength(1);
+    });
+
+  });
+
 });
