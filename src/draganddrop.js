@@ -1,11 +1,29 @@
 /* eslint-disable import/no-cycle */
 import { PopulateList } from './liststructure';
-import listArray from './index';
 
-function DragDropList() {
+function DragEndHandler(e, startPos, currentPos, array) {
+  console.log('evento ', e);
+  console.log('corrio ', array);
+  
+  e.classList.remove('dragging');
+
+    if (startPos !== currentPos) {
+      array[startPos].index = currentPos;
+      array[currentPos].index = startPos;
+    }
+    array.sort((a, b) => a.index - b.index);
+    PopulateList(array);
+    window.location.reload();
+}
+
+function DragDropList(array) {
+  
   const listDraggable = document.querySelectorAll('li');
   let startPos = 0;
   let currentPos = 0;
+
+  
+
   listDraggable.forEach((e) => {
     e.addEventListener('dragstart', () => {
       e.classList.add('dragging');
@@ -19,17 +37,8 @@ function DragDropList() {
       currentPos = parseInt(e.id, 10);
       e.classList.add('over');
     });
-    e.addEventListener('dragend', () => {
-      e.classList.remove('dragging');
-
-      if (startPos !== currentPos) {
-        listArray[startPos].index = currentPos;
-        listArray[currentPos].index = startPos;
-      }
-      PopulateList(listArray);
-      window.location.reload();
-    });
+    e.addEventListener('dragend', () => DragEndHandler(e, startPos, currentPos, array));
   });
 }
 
-export default DragDropList;
+export { DragDropList, DragEndHandler }
