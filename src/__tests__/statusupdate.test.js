@@ -41,5 +41,7 @@ describe('UpdateStatus()', () => {
     UpdateStatus(index, array);
 
     expect(array[0].completed).toBeTruthy();
+    expect(array[1].completed).toBeFalsy();
+    expect(array[2].completed).toBeFalsy();
   });
 });

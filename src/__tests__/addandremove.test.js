@@ -267,6 +267,7 @@ describe('addandremove.js', () => {
       EditTask(array, index);
 
       expect(array[1].description).toBe('Task Edited 2');
+      expect(array[1].description).not.toBe('Task 2');
     });
   });
 
@@ -310,6 +311,10 @@ describe('addandremove.js', () => {
 
       // Assert
       expect(array).toHaveLength(1);
+      expect(array.filter((el) => el.completed === true)).toHaveLength(0);
+      expect(array.filter((el) => el.completed === false)).toHaveLength(1);
+      expect(array[0].completed).toBeFalsy();
+      expect(array[0].description).toBe('Task 2');
     });
   });
 });
